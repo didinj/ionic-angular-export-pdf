@@ -1,7 +1,7 @@
 {
-  "name": "ionic-pdf",
+  "name": "ionic-pdf-export",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular-standalone"
 }

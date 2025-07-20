@@ -1,96 +1,46 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Invoice
-    </ion-title>
-    <ion-buttons slot="primary">
-      <ion-button color="primary" (click)="exportPdf()">
-        <ion-icon slot="icon-only" name="print"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  <div class="printable-content">
-    <div class="printable-area" id="printable-area">
-      <table class="header-table">
+<ion-header
+  ><ion-toolbar><ion-title>Export PDF</ion-title></ion-toolbar></ion-header
+>
+<ion-content class="ion-padding">
+  <div #invoiceContent>
+    <h2>Invoice</h2>
+    <p>Date: {{ today }}</p>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+      <thead>
         <tr>
-          <td width="40%" class="title">INVOICE</td>
-          <td width="60%">
-            <table width="100%">
-              <tr>
-                <td width="50%">+677-12332-1222</td>
-                <td width="50%">Your Address 1st</td>
-              </tr>
-              <tr>
-                <td>your@email.com</td>
-                <td>City, State, Country</td>
-              </tr>
-              <tr>
-                <td>yourwebsite.com</td>
-                <td>Post Code</td>
-              </tr>
-            </table>
-          </td>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Total</th>
         </tr>
-      </table>
-      <table class="subheader-table">
+      </thead>
+      <tbody>
         <tr>
-          <td width="30%">
-            <dt>Billed To:</dt>
-            <dd>Client Name</dd>
-            <dd>Address 1st Line</dd>
-            <dd>City, State, Country</dd>
-            <dd>Post Code</dd>
-          </td>
-          <td width="30%">
-            <dt>Invoice Number:</dt>
-            <dd>009223-222</dd>
-          </td>
-          <td width="40%">
-            <dt>Invoice Total:</dt>
-            <dd>$6.600</dd>
-          </td>
-        </tr>
-      </table>
-      <h3>Invoice Details</h3>
-      <table class="detail-table">
-        <tr>
-          <th width="50%">Description</th>
-          <th width="20%">Unit Price</th>
-          <th width="10%">Qty</th>
-          <th width="20%">Amount</th>
-        </tr>
-        <tr>
-          <td>Apple Macbook Pro Retina 2018</td>
-          <td>$4.500</td>
+          <td>Web Design</td>
           <td>1</td>
-          <td>$4.500</td>
-        </tr>
-        <tr>
-          <td>Apple Mouse Bluetooth</td>
           <td>$500</td>
-          <td>1</td>
           <td>$500</td>
         </tr>
         <tr>
-          <td>Apple Cinema Display</td>
-          <td>$1.000</td>
+          <td>Hosting (1 Year)</td>
           <td>1</td>
-          <td>$1.000</td>
-        </tr>
-      </table>
-      <table class="footer-table">
-        <tr>
-          <td width="80%">Sub Total: </td>
-          <td width="20%">$6.000</td>
+          <td>$100</td>
+          <td>$100</td>
         </tr>
         <tr>
-          <td>Tax: </td>
-          <td>$600</td>
+          <td>Domain Name</td>
+          <td>1</td>
+          <td>$15</td>
+          <td>$15</td>
         </tr>
-      </table>
-    </div>
+        <tr>
+          <td colspan="3" align="right"><strong>Total</strong></td>
+          <td><strong>$615</strong></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <ion-button expand="block" (click)="exportPdf()"
+    >Export & View PDF</ion-button
+  >
 </ion-content>
