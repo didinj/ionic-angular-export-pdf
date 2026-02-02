@@ -30,7 +30,7 @@
     "@capacitor/status-bar": "7.0.1",
     "@ionic/angular": "^8.0.0",
     "ionicons": "^7.0.0",
-    "jspdf": "^3.0.1",
+    "jspdf": "^4.1.0",
     "pdfmake": "^0.2.20",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
